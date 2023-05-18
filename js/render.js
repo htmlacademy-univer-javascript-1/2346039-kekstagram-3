@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 
-export function Render(arr)
+export function RenderPhotos(arr)
 {
   const fragment = document.createDocumentFragment();
   const listElement = document.querySelector('.pictures');
