@@ -1,8 +1,8 @@
 import { getRandom } from './util.js';
 
-export const PhotosArray = [];
 export function generateArray(numberOfPhotos)
 {
+  const PhotosArray = [];
   for(let i = 1 ; i <= numberOfPhotos; i++)
   {
     const photo =
@@ -15,4 +15,5 @@ export function generateArray(numberOfPhotos)
       };
     PhotosArray.push(photo);
   }
+  return PhotosArray;
 }

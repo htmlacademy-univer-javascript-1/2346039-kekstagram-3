@@ -1,8 +1,7 @@
+/* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
-import { generateArray, PhotosArray } from './data.js';
+import { generateArray } from './data.js';
+import { RenderPhotos } from './render.js';
 
-generateArray(25);
-for (let i=0; i<= 25; i++)
-{
-  console.log(PhotosArray[i]);
-}
+const photos = generateArray(25);
+RenderPhotos(photos);
