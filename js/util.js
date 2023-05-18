@@ -1,4 +1,10 @@
-export const getRandom = (min, max) =>
-  Math.floor( min + Math.random() * (max + 1 - min));
+/* eslint-disable no-console */
+export function getRandom(a, b) {
+  const lower = Math.ceil(Math.min(Math.abs(a), Math.abs(b)));
+  const upper = Math.floor(Math.max(Math.abs(a), Math.abs(b)));
 
-export const lengthCheck = (stringToCheck, maxLength) => stringToCheck.length <= maxLength;
+  const result = Math.random() * (upper - lower + 1) + lower;
+  return Math.floor(result);
+}
+
+export const lengthCheck = (string, length) => string.length <= length;

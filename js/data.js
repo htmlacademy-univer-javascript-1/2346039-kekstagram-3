@@ -3,8 +3,7 @@ import { getRandom } from './util.js';
 export function generateArray(numberOfPhotos)
 {
   const PhotosArray = [];
-  for(let i = 1 ; i <= numberOfPhotos; i++)
-  {
+  for(let i = 1 ; i <= numberOfPhotos; i++){
     const photo =
       {
         id: i,
