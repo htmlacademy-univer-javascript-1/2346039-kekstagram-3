@@ -5,3 +5,5 @@ import { RenderPhotos } from './render.js';
 
 const photos = generateArray(25);
 RenderPhotos(photos);
+
+//Задание 7 часть 2
