@@ -3,7 +3,6 @@ const imgUploadOverlay = document.querySelector('.img-upload__overlay');
 const body = document.querySelector('body');
 const closeButton = imgUploadOverlay.querySelector('#upload-cancel');
 
-
 const onPopupEscKeydown = (evt) => {
   if (evt.key === 'Escape') {
     evt.preventDefault();
