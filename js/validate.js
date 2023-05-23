@@ -1,3 +1,8 @@
+import {sendData} from './load.js';
+import {closeOverlay} from './form.js';
+import {createSystemMessage} from './util.js';
+
+const submitButton = document.querySelector('#upload-submit');
 const form = document.querySelector('#upload-select-image');
 
 const pristine = new Pristine(form, {
@@ -7,8 +12,22 @@ const pristine = new Pristine(form, {
 });
 
 form.addEventListener('submit', (evt) => {
+  evt.preventDefault();
   const isValid = pristine.validate();
-  if (!isValid) {
-    evt.preventDefault();
+  if (isValid) {
+    submitButton.disabled = true;
+    sendData(
+      () => {
+        closeOverlay(false);
+        createSystemMessage('success');
+        submitButton.disabled = false;
+      },
+      () => {
+        closeOverlay(true);
+        createSystemMessage('error');
+        submitButton.disabled = false;
+      },
+      new FormData(evt.target),
+    );
   }
 });
